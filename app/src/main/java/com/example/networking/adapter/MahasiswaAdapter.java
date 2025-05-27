@@ -54,10 +54,10 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Mahasiswa mahasiswa = mahasiswaList.get(position);
 
-        holder.binding.tvItemNrp.setText("NRP: " + mahasiswa.getNrp());
-        holder.binding.tvItemNama.setText("Nama: " + mahasiswa.getNama());
-        holder.binding.tvItemEmail.setText("Email: " + mahasiswa.getEmail());
-        holder.binding.tvItemJurusan.setText("Jurusan: " + mahasiswa.getJurusan());
+        holder.binding.tvItemNrp.setText(mahasiswa.getNrp());
+        holder.binding.tvItemNama.setText(mahasiswa.getNama());
+        holder.binding.tvItemEmail.setText(mahasiswa.getEmail());
+        holder.binding.tvItemJurusan.setText(mahasiswa.getJurusan());
 
         holder.binding.btnUpdate.setOnClickListener(v -> {
             Intent intent = new Intent(context, UpdateMahasiswaActivity.class);
